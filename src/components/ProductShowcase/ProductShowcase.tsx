@@ -1,26 +1,24 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Image from "next/image";
-import {
-  FiZap,
-  FiAward,
-  FiTrendingUp,
-  FiShield,
-  FiStar,
-  FiTruck,
-} from "react-icons/fi";
+import Hero from "./Hero/Hero";
+import CategorySection from "./CategorySection/CategorySection";
+import Footer from "./Footer/Footer";
 import type {
   CategoryKey,
-  CategorySection,
-  Product,
+  ICategorySection,
+  IProduct,
 } from "./ProductShowcase.interface";
 import * as S from "./ProductShowcase.styles";
 
-const WHATSAPP_NUMBER = "2348169543479";
+const WHATSAPP_NUMBER = "2348162900206";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-const products: Product[] = [
+const sanitizeInput = (input: string): string => {
+  return input.replace(/[<>'"]/g, "").trim();
+};
+
+const products: IProduct[] = [
   {
     id: "hot-1",
     name: "Pulse Bluetooth Speaker",
@@ -240,7 +238,7 @@ const products: Product[] = [
   },
 ];
 
-const categories: CategorySection[] = [
+const categories: ICategorySection[] = [
   {
     id: "hot-sale",
     title: "Hot Sale",
@@ -280,19 +278,24 @@ const formatter = new Intl.NumberFormat("en-NG", {
   maximumFractionDigits: 0,
 });
 
-const resolveImagePath = (path: string) => `${BASE_PATH}${path}`;
+const buildWhatsAppUrl = (product: IProduct, categoryTitle: string): string => {
+  const sanitizedName = sanitizeInput(product.name);
+  const sanitizedCategory = sanitizeInput(categoryTitle);
+  const sanitizedPromoCode = product.promoCode
+    ? sanitizeInput(product.promoCode)
+    : "";
 
-const buildWhatsAppUrl = (product: Product, categoryTitle: string) => {
-  const origin = typeof window !== "undefined" ? window.location.origin : "";
-  const imageUrl = product.image.startsWith("http")
-    ? product.image
-    : `${origin}${BASE_PATH}${product.image}`;
-
-  const message = `Hello, I want to buy:\n\n${product.name}\nCategory: ${categoryTitle}\nPrice: ${formatter.format(
-    product.price,
-  )}${product.promoCode ? `\nPromo Code: ${product.promoCode}` : ""}${
-    product.promoPercent ? `\nDiscount: ${product.promoPercent}%` : ""
-  }\nImage: ${imageUrl}`;
+  const message = [
+    "Hello, I want to buy:",
+    "",
+    sanitizedName,
+    `Category: ${sanitizedCategory}`,
+    `Price: ${formatter.format(product.price)}`,
+    sanitizedPromoCode ? `Promo Code: ${sanitizedPromoCode}` : "",
+    product.promoPercent ? `Discount: ${product.promoPercent}%` : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 };
@@ -305,7 +308,7 @@ export default function ProductShowcase() {
     [],
   );
 
-  const handleLoadMore = (categoryId: CategoryKey) => {
+  const handleLoadMore = (categoryId: CategoryKey): void => {
     const category = categoryMap.get(categoryId);
     if (!category) return;
 
@@ -315,143 +318,26 @@ export default function ProductShowcase() {
     });
   };
 
+  const handleBuyClick = (product: IProduct, categoryTitle: string): void => {
+    const url = buildWhatsAppUrl(product, categoryTitle);
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <S.Page>
-      <S.Hero>
-        <S.HeroContent>
-          <S.HeroTitle>
-            Meet Onyiye — curated gear for bold lifestyles.
-          </S.HeroTitle>
-          <S.HeroText>
-            Explore hot sales, best sellers, and popular picks. Every product
-            includes instant WhatsApp checkout so you can purchase in seconds.
-          </S.HeroText>
-          <S.HeroActions>
-            <S.PrimaryButton href="#categories">
-              Shop Collections
-            </S.PrimaryButton>
-            <S.GhostButton href="#contact">Talk to Sales</S.GhostButton>
-          </S.HeroActions>
-        </S.HeroContent>
-        <S.HeroVisual>
-          <div>
-            <FiZap size={22} /> Instant buy in WhatsApp
-          </div>
-          <S.MetricRow>
-            <S.MetricCard>
-              <S.MetricValue>40+</S.MetricValue>
-              <S.MetricLabel>Curated products</S.MetricLabel>
-            </S.MetricCard>
-            <S.MetricCard>
-              <S.MetricValue>4.9/5</S.MetricValue>
-              <S.MetricLabel>Customer love</S.MetricLabel>
-            </S.MetricCard>
-            <S.MetricCard>
-              <S.MetricValue>24h</S.MetricValue>
-              <S.MetricLabel>Fast response</S.MetricLabel>
-            </S.MetricCard>
-          </S.MetricRow>
-          <S.MetricRow>
-            <S.MetricCard>
-              <S.MetricValue>
-                <FiAward /> Trusted
-              </S.MetricValue>
-              <S.MetricLabel>Top-rated store</S.MetricLabel>
-            </S.MetricCard>
-            <S.MetricCard>
-              <S.MetricValue>
-                <FiTrendingUp /> Trending
-              </S.MetricValue>
-              <S.MetricLabel>Weekly drops</S.MetricLabel>
-            </S.MetricCard>
-            <S.MetricCard>
-              <S.MetricValue>
-                <FiShield /> Secure
-              </S.MetricValue>
-              <S.MetricLabel>Verified vendors</S.MetricLabel>
-            </S.MetricCard>
-          </S.MetricRow>
-        </S.HeroVisual>
-      </S.Hero>
-
+      <Hero />
       <S.Categories id="categories">
-        {categories.map((category) => {
-          const visibleItems = category.items.slice(
-            0,
-            visibleCounts[category.id],
-          );
-          const hasMore = visibleCounts[category.id] < category.items.length;
-
-          return (
-            <section key={category.id}>
-              <S.SectionHeader>
-                <S.SectionTitle>{category.title}</S.SectionTitle>
-                <S.SectionSubtitle>{category.subtitle}</S.SectionSubtitle>
-              </S.SectionHeader>
-              <S.CardsGrid>
-                {visibleItems.map((product) => (
-                  <S.ProductCard key={product.id}>
-                    <S.ProductImage>
-                      <Image
-                        src={resolveImagePath(product.image)}
-                        alt={product.name}
-                        width={520}
-                        height={340}
-                        sizes="(max-width: 48em) 100vw, 33vw"
-                        style={{ width: "100%", height: "auto" }}
-                      />
-                    </S.ProductImage>
-                    <S.ProductBody>
-                      <S.ProductTitle>{product.name}</S.ProductTitle>
-                      <S.ProductDescription>
-                        {product.description}
-                      </S.ProductDescription>
-                      <S.TagRow>
-                        {product.badge && <S.Badge>{product.badge}</S.Badge>}
-                        {product.promoCode && (
-                          <S.PromoChip>
-                            {product.promoCode} · {product.promoPercent}% off
-                          </S.PromoChip>
-                        )}
-                      </S.TagRow>
-                      <S.PriceRow>
-                        <S.Price>{formatter.format(product.price)}</S.Price>
-                        <S.BuyButton
-                          href={buildWhatsAppUrl(product, category.title)}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          Buy on WhatsApp
-                        </S.BuyButton>
-                      </S.PriceRow>
-                    </S.ProductBody>
-                  </S.ProductCard>
-                ))}
-              </S.CardsGrid>
-              {hasMore && (
-                <S.LoadMoreRow>
-                  <S.LoadMoreButton
-                    type="button"
-                    onClick={() => handleLoadMore(category.id)}
-                  >
-                    Load more {category.title.toLowerCase()}
-                  </S.LoadMoreButton>
-                </S.LoadMoreRow>
-              )}
-            </section>
-          );
-        })}
+        {categories.map((category) => (
+          <CategorySection
+            key={category.id}
+            category={category}
+            visibleCount={visibleCounts[category.id]}
+            onLoadMore={() => handleLoadMore(category.id)}
+            onBuyClick={handleBuyClick}
+          />
+        ))}
       </S.Categories>
-
-      <S.Footer id="contact">
-        <div>
-          <FiStar /> Premium picks · <FiTruck /> Fast delivery · <FiShield />
-          Secure checkout
-        </div>
-        <div>
-          Replace the WhatsApp number and product images with your live data.
-        </div>
-      </S.Footer>
+      <Footer />
     </S.Page>
   );
 }

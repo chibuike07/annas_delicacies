@@ -8,7 +8,7 @@ export const Page = styled.main`
   gap: 3rem;
 `;
 
-export const Hero = styled.section`
+export const OldHero = styled.section`
   background:
     radial-gradient(
       circle at top left,
