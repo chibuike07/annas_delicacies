@@ -98,7 +98,12 @@ const QuantityActions = ({ product, categoryTitle }: QuantityActionsProps) => {
         </div>
       </div>
       <div className="price_total">Total: {totalPrice}</div>
-      <a href={whatsappUrl} className="btn primary" rel="noopener noreferrer">
+      <a
+        href={whatsappUrl}
+        className="btn primary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         💬 Buy on WhatsApp
       </a>
     </div>

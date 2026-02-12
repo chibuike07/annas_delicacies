@@ -18,7 +18,7 @@ The Anna Product Showcase has been enhanced with:
 #### What Changed
 
 - Images now use fully qualified URLs instead of relative paths
-- Format: `https://chibuike07.github.io/anna_products/products/{image}.svg`
+- Format: `https://chibuike07.github.io/annas_delicacies/products/{image}.png`
 - Accessible from WhatsApp, emails, social media, and external sources
 
 #### Implementation Files
@@ -34,10 +34,10 @@ The Anna Product Showcase has been enhanced with:
 
 ```typescript
 // Before (relative):
-/products/zen-chair.svg
+/products/best_1.png
 
 // After (absolute):
-https://chibuike07.github.io/anna_products/products/zen-chair.svg
+https://chibuike07.github.io/annas_delicacies/products/best_1.png
 ```
 
 ---
@@ -48,9 +48,9 @@ https://chibuike07.github.io/anna_products/products/zen-chair.svg
 
 ```
 /product/[id]
-├── /product/hot-1        → Pulse Bluetooth Speaker
-├── /product/hot-2        → Halo Wireless Headphones
-├── /product/best-1       → Zen Ergonomic Chair
+├── /product/hot_1        → Pulse Bluetooth Speaker
+├── /product/hot_2        → Halo Wireless Headphones
+├── /product/best_1       → Zen Ergonomic Chair
 └── ... (24 products total)
 ```
 
@@ -94,7 +94,7 @@ When a customer clicks "Buy on WhatsApp":
    Category: Best Sellers
    Promo Code: ZEN12
    Discount: 12%
-   Product Link: https://chibuike07.github.io/anna_products/product/best-1
+   Product Link: https://chibuike07.github.io/annas_delicacies/product/best_1
    ```
 
 2. **Customer receives message** with product link
@@ -148,11 +148,11 @@ export const APP_URL = `${DEPLOYED_ORIGIN}${BASE_PATH}`;
 
 export const getAbsoluteImageUrl = (imagePath: string): string
   // Validates path starts with "/"
-  // Returns: https://chibuike07.github.io/anna_products{imagePath}
+  // Returns: https://chibuike07.github.io/annas_delicacies{imagePath}
 
 export const getProductDetailUrl = (productId: string): string
   // Creates deep link to product detail page
-  // Returns: https://chibuike07.github.io/anna_products/product/{id}
+  // Returns: https://chibuike07.github.io/annas_delicacies/product/{id}
 
 export const getProductImageUrl = (imagePath: string): string
   // Alias for getAbsoluteImageUrl
@@ -165,17 +165,17 @@ export const getProductImageUrl = (imagePath: string): string
 
 ### Deployment URLs
 
-- **Main Site**: https://chibuike07.github.io/anna_products
-- **Product List**: https://chibuike07.github.io/anna_products#categories
-- **Product Detail**: https://chibuike07.github.io/anna_products/product/best-1
-- **Image URL**: https://chibuike07.github.io/anna_products/products/zen-chair.svg
+- **Main Site**: https://chibuike07.github.io/annas_delicacies
+- **Product List**: https://chibuike07.github.io/annas_delicacies#categories
+- **Product Detail**: https://chibuike07.github.io/annas_delicacies/product/best_1
+- **Image URL**: https://chibuike07.github.io/annas_delicacies/products/best_1.png
 
 ### WhatsApp Integration
 
 ```
 User sends inquiry for "Zen Ergonomic Chair"
     ↓
-Message includes: https://chibuike07.github.io/anna_products/product/best-1
+Message includes: https://chibuike07.github.io/annas_delicacies/product/best_1
     ↓
 Vendor receives message with product link
     ↓
@@ -275,9 +275,9 @@ Optional: Click Buy button → WhatsApp with product link
 
 ```
 GitHub Pages
-├── Root: chibuike07.github.io/anna_products
-├── Images: chibuike07.github.io/anna_products/products/*.svg
-├── Products: chibuike07.github.io/anna_products/product/[id]
+├── Root: chibuike07.github.io/annas_delicacies
+├── Images: chibuike07.github.io/annas_delicacies/products/*.png
+├── Products: chibuike07.github.io/annas_delicacies/product/[id]
 ```
 
 ---
@@ -399,7 +399,7 @@ Total Price: ₦98,000.00
 Category: Best Sellers
 Promo Code: ZEN12
 Discount: 12%
-Product Link: https://chibuike07.github.io/anna_products/product/best-1
+Product Link: https://chibuike07.github.io/annas_delicacies/product/best_1
 ```
 
 Vendor receives this message and can:

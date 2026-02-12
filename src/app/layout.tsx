@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { DEPLOYED_ORIGIN, OG_IMAGE_URL } from "@/lib/utils/config";
 import StyledComponentsRegistry from "@/lib/styled-components-registry";
 import "./globals.css";
@@ -60,7 +61,7 @@ export const viewport = {
   maximumScale: 5,
 };
 
-const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
     <html lang="en">
       <body>

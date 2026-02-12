@@ -8,7 +8,8 @@ export const BASE_PATH = RAW_BASE_PATH === "/" ? "" : RAW_BASE_PATH;
 
 // Production deployment URL
 const RAW_ORIGIN =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://chibuike07.github.io";
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://chibuike07.github.io/annas_delicacies";
 const NORMALIZED_ORIGIN = RAW_ORIGIN.replace(/\/+$/, "");
 const ORIGIN_WITHOUT_BASE_PATH =
   BASE_PATH && NORMALIZED_ORIGIN.endsWith(BASE_PATH)

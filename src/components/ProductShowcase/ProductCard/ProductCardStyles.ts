@@ -19,14 +19,15 @@ export const ProductCardWrapper = styled.article`
   }
 
   .product_image {
-    background: linear-gradient(135deg, #16a34a 0%, #4ade80 55%, #22c55e 100%);
-    padding: 1.5rem;
+    background: transparent;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
     aspect-ratio: 4 / 3;
+    min-height: 220px;
 
     a {
       display: flex;
@@ -35,12 +36,25 @@ export const ProductCardWrapper = styled.article`
       width: 100%;
       height: 100%;
       text-decoration: none;
+      background: transparent;
     }
 
-    span,
+    span {
+      border-radius: 12px;
+      overflow: hidden;
+      width: 100% !important;
+      height: 100% !important;
+      background: transparent;
+    }
+
     img {
       border-radius: 12px;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center;
       transition: transform 0.2s ease;
+      background: transparent;
     }
 
     a:hover img {

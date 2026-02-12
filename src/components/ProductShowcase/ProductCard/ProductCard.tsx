@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState, useCallback } from "react";
+import type { ChangeEvent, MouseEvent } from "react";
 import Link from "next/link";
 import { ProductCardWrapper } from "./ProductCardStyles";
 import type { IProductCardProps } from "./ProductCard.interface";
@@ -42,7 +43,7 @@ const ProductCard = ({
   }, []);
 
   const handleQuantityChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
+    (e: ChangeEvent<HTMLInputElement>) => {
       const value = e.target.value;
 
       // Handle empty input
@@ -68,12 +69,16 @@ const ProductCard = ({
   );
 
   const handleBuyClick = useCallback(
-    (e: React.MouseEvent<HTMLAnchorElement>) => {
+    (e: MouseEvent<HTMLAnchorElement>) => {
       e.preventDefault();
 
       // Final validation before submitting
       const validatedQuantity = validateQuantity(quantity);
-      onBuyClick(product, categoryTitle, validatedQuantity);
+      const url = onBuyClick(product, categoryTitle, validatedQuantity);
+
+      if (typeof url === "string" && url !== "#") {
+        window.open(url, "_blank", "noopener,noreferrer");
+      }
     },
     [product, categoryTitle, quantity, onBuyClick],
   );
@@ -155,7 +160,8 @@ const ProductCard = ({
             href="#"
             className="buy_btn"
             onClick={handleBuyClick}
-            rel="noreferrer noopener"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Buy on WhatsApp
           </a>
