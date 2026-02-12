@@ -12,7 +12,7 @@ import {
   buildWhatsAppUrl,
 } from "@/lib/utils/dummyData";
 
-export default function ProductShowcase() {
+const ProductShowcase = () => {
   const [visibleCounts, setVisibleCounts] = useState(initialVisible);
 
   const categoryMap = useMemo(
@@ -56,4 +56,6 @@ export default function ProductShowcase() {
       <Footer />
     </Page>
   );
-}
+};
+
+export default ProductShowcase;

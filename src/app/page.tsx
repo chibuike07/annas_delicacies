@@ -1,6 +1,6 @@
 import ProductShowcase from "@/components/ProductShowcase/ProductShowcase";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <>
       <script
@@ -45,4 +45,6 @@ export default function HomePage() {
       <ProductShowcase />
     </>
   );
-}
+};
+
+export default HomePage;

@@ -2,7 +2,7 @@ import { FiStar, FiTruck, FiShield } from "react-icons/fi";
 import { FooterSection } from "./FooterStyles";
 import type { IFooterProps } from "./Footer.interface";
 
-export default function Footer({}: IFooterProps) {
+const Footer = ({}: IFooterProps) => {
   return (
     <FooterSection id="contact">
       <div className="footer_icons">
@@ -14,4 +14,6 @@ export default function Footer({}: IFooterProps) {
       </div>
     </FooterSection>
   );
-}
+};
+
+export default Footer;

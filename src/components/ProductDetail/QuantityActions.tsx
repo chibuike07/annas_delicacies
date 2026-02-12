@@ -15,10 +15,10 @@ interface QuantityActionsProps {
   categoryTitle: string;
 }
 
-export default function QuantityActions({
+const QuantityActions = ({
   product,
   categoryTitle,
-}: QuantityActionsProps) {
+}: QuantityActionsProps) => {
   const [quantity, setQuantity] = useState(1);
   const [inputError, setInputError] = useState(false);
 
@@ -106,4 +106,6 @@ export default function QuantityActions({
       </a>
     </div>
   );
-}
+};
+
+export default QuantityActions;

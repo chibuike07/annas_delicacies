@@ -309,7 +309,7 @@ const ProductContainer = styled.article`
   }
 `;
 
-export default function ProductDetailPage({ params }: IProductDetailPageProps) {
+const ProductDetailPage = ({ params }: IProductDetailPageProps) => {
   const product = products.find((p) => p.id === params.id);
 
   if (!product) {
@@ -395,4 +395,6 @@ export default function ProductDetailPage({ params }: IProductDetailPageProps) {
       </ProductContainer>
     </PageWrapper>
   );
-}
+};
+
+export default ProductDetailPage;

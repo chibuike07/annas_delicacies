@@ -2,7 +2,7 @@ import { FiZap, FiAward, FiTrendingUp, FiShield } from "react-icons/fi";
 import { HeroSection } from "./HeroStyles";
 import type { IHeroProps } from "./Hero.interface";
 
-export default function Hero({}: IHeroProps) {
+const Hero = ({}: IHeroProps) => {
   return (
     <HeroSection>
       <div className="hero_content">
@@ -62,4 +62,6 @@ export default function Hero({}: IHeroProps) {
       </div>
     </HeroSection>
   );
-}
+};
+
+export default Hero;

@@ -23,11 +23,11 @@ const resolveImageUrl = (path: string): string => {
   return getAbsoluteImageUrl(path);
 };
 
-export default function ProductCard({
+const ProductCard = ({
   product,
   categoryTitle,
   onBuyClick,
-}: IProductCardProps) {
+}: IProductCardProps) => {
   const [quantity, setQuantity] = useState(1);
   const [inputError, setInputError] = useState(false);
 
@@ -156,4 +156,6 @@ export default function ProductCard({
       </div>
     </ProductCardWrapper>
   );
-}
+};
+
+export default ProductCard;

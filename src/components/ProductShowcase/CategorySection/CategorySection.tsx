@@ -2,12 +2,12 @@ import ProductCard from "../ProductCard/ProductCard";
 import { CategorySectionWrapper } from "./CategorySectionStyles";
 import type { ICategorySectionProps } from "./CategorySection.interface";
 
-export default function CategorySection({
+const CategorySection = ({
   category,
   visibleCount,
   onLoadMore,
   onBuyClick,
-}: ICategorySectionProps) {
+}: ICategorySectionProps) => {
   const visibleItems = category.items.slice(0, visibleCount);
   const hasMore = visibleCount < category.items.length;
 
@@ -36,4 +36,6 @@ export default function CategorySection({
       )}
     </CategorySectionWrapper>
   );
-}
+};
+
+export default CategorySection;
