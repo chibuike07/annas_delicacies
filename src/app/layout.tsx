@@ -14,14 +14,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://princ.github.io/ngozi-site",
+    url: "https://chibuike07.github.io/ngozi_products_site",
     siteName: "Ngozi",
     title: "Ngozi - Premium Curated Products | Instant WhatsApp Checkout",
     description:
       "Shop premium curated gear for bold lifestyles with instant WhatsApp checkout.",
     images: [
       {
-        url: "https://princ.github.io/ngozi-site/og-image.jpg",
+        url: "https://chibuike07.github.io/ngozi_products_site/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Ngozi Store - Premium Curated Products",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Ngozi - Premium Curated Products | Instant WhatsApp Checkout",
     description:
       "Shop premium curated gear for bold lifestyles with instant WhatsApp checkout.",
-    images: ["https://princ.github.io/ngozi-site/og-image.jpg"],
+    images: ["https://chibuike07.github.io/ngozi_products_site/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://princ.github.io/ngozi-site",
+    canonical: "https://chibuike07.github.io/ngozi_products_site",
   },
   viewport: "width=device-width, initial-scale=1, maximum-scale=5",
 };

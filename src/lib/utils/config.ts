@@ -3,7 +3,7 @@
  */
 
 // Production deployment URL
-export const DEPLOYED_ORIGIN = "https://princ.github.io";
+export const DEPLOYED_ORIGIN = "https://chibuike07.github.io";
 
 // Base path for the application
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";

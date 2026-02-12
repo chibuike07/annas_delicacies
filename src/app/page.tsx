@@ -10,8 +10,8 @@ export default function HomePage() {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Ngozi",
-            url: "https://princ.github.io/ngozi-site",
-            logo: "https://princ.github.io/ngozi-site/logo.png",
+            url: "https://chibuike07.github.io/ngozi_products_site",
+            logo: "https://chibuike07.github.io/ngozi_products_site/logo.png",
             description:
               "Premium curated products with instant WhatsApp checkout",
             sameAs: ["https://wa.me/2348121485310"],
@@ -32,7 +32,7 @@ export default function HomePage() {
             name: "Ngozi Curated Products",
             description:
               "Discover premium curated gear for bold lifestyles. Hot sales, best sellers, popular picks, and more.",
-            url: "https://princ.github.io/ngozi-site",
+            url: "https://chibuike07.github.io/ngozi_products_site",
             mainEntity: {
               "@type": "Product",
               name: "Curated Product Collection",

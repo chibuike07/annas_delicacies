@@ -18,13 +18,13 @@ The Ngozi Product Showcase has been enhanced with:
 #### What Changed
 
 - Images now use fully qualified URLs instead of relative paths
-- Format: `https://princ.github.io/ngozi-site/products/{image}.svg`
+- Format: `https://chibuike07.github.io/ngozi_products_site/products/{image}.svg`
 - Accessible from WhatsApp, emails, social media, and external sources
 
 #### Implementation Files
 
 - **New File**: `src/lib/utils/config.ts`
-  - `DEPLOYED_ORIGIN` = `"https://princ.github.io"`
+  - `DEPLOYED_ORIGIN` = `"https://chibuike07.github.io"`
   - `APP_URL` = Origin + Base Path
   - `getAbsoluteImageUrl()` - Converts relative paths to absolute URLs
   - `getProductImageUrl()` - Specifically for images
@@ -37,7 +37,7 @@ The Ngozi Product Showcase has been enhanced with:
 /products/zen-chair.svg
 
 // After (absolute):
-https://princ.github.io/ngozi-site/products/zen-chair.svg
+https://chibuike07.github.io/ngozi_products_site/products/zen-chair.svg
 ```
 
 ---
@@ -94,7 +94,7 @@ When a customer clicks "Buy on WhatsApp":
    Category: Best Sellers
    Promo Code: ZEN12
    Discount: 12%
-   Product Link: https://princ.github.io/ngozi-site/product/best-1
+   Product Link: https://chibuike07.github.io/ngozi_products_site/product/best-1
    ```
 
 2. **Customer receives message** with product link
@@ -142,17 +142,17 @@ Message sent with product link included
 ### File: `src/lib/utils/config.ts`
 
 ```typescript
-export const DEPLOYED_ORIGIN = "https://princ.github.io";
+export const DEPLOYED_ORIGIN = "https://chibuike07.github.io";
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export const APP_URL = `${DEPLOYED_ORIGIN}${BASE_PATH}`;
 
 export const getAbsoluteImageUrl = (imagePath: string): string
   // Validates path starts with "/"
-  // Returns: https://princ.github.io/ngozi-site{imagePath}
+  // Returns: https://chibuike07.github.io/ngozi_products_site{imagePath}
 
 export const getProductDetailUrl = (productId: string): string
   // Creates deep link to product detail page
-  // Returns: https://princ.github.io/ngozi-site/product/{id}
+  // Returns: https://chibuike07.github.io/ngozi_products_site/product/{id}
 
 export const getProductImageUrl = (imagePath: string): string
   // Alias for getAbsoluteImageUrl
@@ -165,17 +165,17 @@ export const getProductImageUrl = (imagePath: string): string
 
 ### Deployment URLs
 
-- **Main Site**: https://princ.github.io/ngozi-site
-- **Product List**: https://princ.github.io/ngozi-site#categories
-- **Product Detail**: https://princ.github.io/ngozi-site/product/best-1
-- **Image URL**: https://princ.github.io/ngozi-site/products/zen-chair.svg
+- **Main Site**: https://chibuike07.github.io/ngozi_products_site
+- **Product List**: https://chibuike07.github.io/ngozi_products_site#categories
+- **Product Detail**: https://chibuike07.github.io/ngozi_products_site/product/best-1
+- **Image URL**: https://chibuike07.github.io/ngozi_products_site/products/zen-chair.svg
 
 ### WhatsApp Integration
 
 ```
 User sends inquiry for "Zen Ergonomic Chair"
     ↓
-Message includes: https://princ.github.io/ngozi-site/product/best-1
+Message includes: https://chibuike07.github.io/ngozi_products_site/product/best-1
     ↓
 Vendor receives message with product link
     ↓
@@ -275,9 +275,9 @@ Optional: Click Buy button → WhatsApp with product link
 
 ```
 GitHub Pages
-├── Root: princ.github.io/ngozi-site
-├── Images: princ.github.io/ngozi-site/products/*.svg
-├── Products: princ.github.io/ngozi-site/product/[id]
+├── Root: chibuike07.github.io/ngozi_products_site
+├── Images: chibuike07.github.io/ngozi_products_site/products/*.svg
+├── Products: chibuike07.github.io/ngozi_products_site/product/[id]
 ```
 
 ---
@@ -399,7 +399,7 @@ Total Price: ₦98,000.00
 Category: Best Sellers
 Promo Code: ZEN12
 Discount: 12%
-Product Link: https://princ.github.io/ngozi-site/product/best-1
+Product Link: https://chibuike07.github.io/ngozi_products_site/product/best-1
 ```
 
 Vendor receives this message and can:
