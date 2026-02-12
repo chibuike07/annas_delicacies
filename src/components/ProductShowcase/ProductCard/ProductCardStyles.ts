@@ -19,7 +19,7 @@ export const ProductCardWrapper = styled.article`
   }
 
   .product_image {
-    background: linear-gradient(135deg, var(--accent-soft), #fff7ed);
+    background: linear-gradient(135deg, #ff0080 0%, #ffbf00 55%, #7c3aed 100%);
     padding: 1.5rem;
     display: flex;
     align-items: center;
