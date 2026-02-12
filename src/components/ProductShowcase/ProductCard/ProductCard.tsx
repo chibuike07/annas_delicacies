@@ -8,7 +8,7 @@ import {
   validateQuantity,
   formatter,
 } from "@/lib/utils/dummyData";
-import { getAbsoluteImageUrl, APP_URL } from "@/lib/utils/config";
+import { getPublicAssetPath } from "@/lib/utils/config";
 
 const sanitizeText = (text: string): string => {
   if (typeof text !== "string") return "";
@@ -20,7 +20,7 @@ const sanitizeText = (text: string): string => {
  * Returns absolute URL for WhatsApp and external sharing
  */
 const resolveImageUrl = (path: string): string => {
-  return getAbsoluteImageUrl(path);
+  return getPublicAssetPath(path);
 };
 
 const ProductCard = ({

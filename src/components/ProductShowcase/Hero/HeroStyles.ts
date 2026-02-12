@@ -4,15 +4,15 @@ export const HeroSection = styled.div`
   background:
     radial-gradient(
       circle at top left,
-      rgba(37, 99, 235, 0.22),
+      rgba(234, 88, 12, 0.22),
       transparent 55%
     ),
     radial-gradient(
       circle at bottom right,
-      rgba(124, 58, 237, 0.18),
+      rgba(22, 163, 74, 0.18),
       transparent 50%
     ),
-    linear-gradient(135deg, #ffffff 0%, #eff6ff 55%, #eef2ff 100%);
+    linear-gradient(135deg, #ffffff 0%, #fff7ed 55%, #ffedd5 100%);
   border: 1px solid var(--border);
   border-radius: 24px;
   padding: 3rem 6%;
@@ -55,14 +55,14 @@ export const HeroSection = styled.div`
         border-radius: 999px;
         font-size: 1rem;
         font-weight: 600;
-        box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+        box-shadow: 0 10px 25px rgba(234, 88, 12, 0.35);
         transition:
           transform 0.2s ease,
           box-shadow 0.2s ease;
 
         &:hover {
           transform: translateY(-2px);
-          box-shadow: 0 14px 35px rgba(29, 78, 216, 0.35);
+          box-shadow: 0 14px 35px rgba(194, 65, 12, 0.35);
         }
       }
 
@@ -87,7 +87,7 @@ export const HeroSection = styled.div`
   }
 
   .hero_visual {
-    background: linear-gradient(145deg, #0f172a 0%, #1e3a8a 45%, #312e81 100%);
+    background: linear-gradient(145deg, #7c2d12 0%, #9a3412 45%, #14532d 100%);
     border-radius: 20px;
     padding: 1.5rem;
     color: #fff;

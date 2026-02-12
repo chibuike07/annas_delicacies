@@ -12,6 +12,18 @@ export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export const APP_URL = `${DEPLOYED_ORIGIN}${BASE_PATH}`;
 
 /**
+ * Build public asset path for in-app usage
+ * Ensures basePath is respected for GitHub Pages
+ */
+export const getPublicAssetPath = (assetPath: string): string => {
+  if (typeof assetPath !== "string" || !assetPath.startsWith("/")) {
+    return "";
+  }
+
+  return `${BASE_PATH}${assetPath}`;
+};
+
+/**
  * Build absolute image URL for external usage (WhatsApp, emails, etc.)
  * Ensures images are accessible from any external source
  */

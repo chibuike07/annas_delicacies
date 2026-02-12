@@ -3,7 +3,7 @@ import type {
   ICategorySection,
   IProduct,
 } from "@/components/ProductShowcase/ProductShowcase.interface";
-import { getProductDetailUrl, getAbsoluteImageUrl } from "./config";
+import { getProductDetailUrl } from "./config";
 
 export const WHATSAPP_NUMBER = "2348121485310";
 
@@ -132,7 +132,7 @@ export const products: IProduct[] = [
     promoPercent: 12,
     image: "/products/egusi-soup.svg",
     category: "best-sellers",
-    badge: "Best Seller",
+    badge: "Bell Sales",
   },
   {
     id: "best-2",
@@ -294,7 +294,7 @@ export const categories: ICategorySection[] = [
   },
   {
     id: "best-sellers",
-    title: "Best Sellers",
+    title: "Bell Sales",
     subtitle: "Traditional favorites loved by our customers.",
     items: products.filter((product) => product.category === "best-sellers"),
   },

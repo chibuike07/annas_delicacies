@@ -19,7 +19,7 @@ export const ProductCardWrapper = styled.article`
   }
 
   .product_image {
-    background: linear-gradient(135deg, var(--accent-soft), #dbeafe);
+    background: linear-gradient(135deg, var(--accent-soft), #fff7ed);
     padding: 1.5rem;
     display: flex;
     align-items: center;
@@ -85,7 +85,7 @@ export const ProductCardWrapper = styled.article`
         font-size: 0.72rem;
         padding: 0.3rem 0.6rem;
         border-radius: 999px;
-        background: rgba(37, 99, 235, 0.12);
+        background: rgba(234, 88, 12, 0.12);
         color: var(--brand-dark);
         font-weight: 600;
       }
@@ -94,7 +94,7 @@ export const ProductCardWrapper = styled.article`
         font-size: 0.72rem;
         padding: 0.3rem 0.6rem;
         border-radius: 999px;
-        background: rgba(124, 58, 237, 0.16);
+        background: rgba(22, 163, 74, 0.16);
         color: var(--accent);
         font-weight: 600;
       }

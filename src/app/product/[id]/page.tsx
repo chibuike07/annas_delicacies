@@ -5,6 +5,7 @@ import QuantityActions from "@/components/ProductDetail/QuantityActions";
 import {
   getAbsoluteImageUrl,
   getProductDetailUrl,
+  getPublicAssetPath,
   APP_URL,
 } from "@/lib/utils/config";
 import styled from "styled-components";
@@ -34,6 +35,7 @@ export async function generateMetadata({
   }
 
   const productImageUrl = getAbsoluteImageUrl(product.image);
+  const productImageSrc = getPublicAssetPath(product.image);
   const productPageUrl = getProductDetailUrl(product.id);
 
   return {
@@ -70,7 +72,7 @@ export async function generateMetadata({
 
 const PageWrapper = styled.div`
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -86,7 +88,7 @@ const ProductContainer = styled.article`
   box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
 
   .product_header {
-    background: linear-gradient(135deg, var(--accent-soft), #dbeafe);
+    background: linear-gradient(135deg, var(--accent-soft), #fff7ed);
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -118,7 +120,7 @@ const ProductContainer = styled.article`
         display: inline-block;
         padding: 0.4rem 0.8rem;
         border-radius: 999px;
-        background: rgba(37, 99, 235, 0.12);
+        background: rgba(234, 88, 12, 0.12);
         color: var(--brand-dark);
         font-weight: 600;
         font-size: 0.85rem;
@@ -128,7 +130,7 @@ const ProductContainer = styled.article`
         display: inline-block;
         padding: 0.4rem 0.8rem;
         border-radius: 999px;
-        background: rgba(124, 58, 237, 0.16);
+        background: rgba(22, 163, 74, 0.16);
         color: var(--accent);
         font-weight: 600;
         font-size: 0.85rem;
@@ -353,7 +355,7 @@ const ProductDetailPage = ({ params }: IProductDetailPageProps) => {
 
         <div className="product_header">
           <img
-            src={productImageUrl}
+            src={productImageSrc}
             alt={product.name}
             width={400}
             height={300}
