@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Image from "next/image";
 import { products, formatter, WHATSAPP_NUMBER } from "@/lib/utils/dummyData";
 import {
   getAbsoluteImageUrl,
@@ -283,13 +282,13 @@ export default function ProductDetailPage({ params }: IProductDetailPageProps) {
         />
 
         <div className="product_header">
-          <Image
+          <img
             src={productImageUrl}
             alt={product.name}
             width={400}
             height={300}
             style={{ width: "auto", height: "auto", maxWidth: "100%" }}
-            priority
+            loading="eager"
           />
         </div>
 
