@@ -5,6 +5,7 @@ import { categories, products, formatter } from "@/lib/utils/dummyData";
 import QuantityActions from "@/components/ProductDetail/QuantityActions";
 import {
   getAbsoluteImageUrl,
+  getOgImageUrl,
   getProductDetailUrl,
   getPublicAssetPath,
   APP_URL,
@@ -36,6 +37,7 @@ export async function generateMetadata({
   }
 
   const productImageUrl = getAbsoluteImageUrl(product.image);
+  const ogImageUrl = getOgImageUrl(product.image);
   const productImageSrc = getPublicAssetPath(product.image);
   const productPageUrl = getProductDetailUrl(product.id);
 
@@ -52,9 +54,9 @@ export async function generateMetadata({
       description: product.description,
       images: [
         {
-          url: productImageUrl,
-          width: 520,
-          height: 340,
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
           alt: product.name,
         },
       ],
@@ -63,7 +65,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: product.name,
       description: product.description,
-      images: [productImageUrl],
+      images: [ogImageUrl],
     },
     alternates: {
       canonical: productPageUrl,

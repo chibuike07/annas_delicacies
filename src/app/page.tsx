@@ -1,4 +1,5 @@
 import ProductShowcase from "@/components/ProductShowcase/ProductShowcase";
+import { LOGO_URL } from "@/lib/utils/config";
 
 const HomePage = () => {
   return (
@@ -11,7 +12,7 @@ const HomePage = () => {
             "@type": "Organization",
             name: "Anna's Kitchen",
             url: "https://chibuike07.github.io/annas_delicacies",
-            logo: "https://chibuike07.github.io/annas_delicacies/logo.png",
+            logo: LOGO_URL,
             description:
               "Premium curated products with instant WhatsApp checkout",
             sameAs: ["https://wa.me/2348121485310"],

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE_URL } from "@/lib/utils/config";
 import StyledComponentsRegistry from "@/lib/styled-components-registry";
 import "./globals.css";
 
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
       "Shop premium curated gear for bold lifestyles with instant WhatsApp checkout.",
     images: [
       {
-        url: "https://chibuike07.github.io/annas_delicacies/og-image.jpg",
+        url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: "Anna's Kitchen - Nigerian Igbo Delicacies",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     title: "Anna's Kitchen - Authentic Nigerian Igbo Delicacies",
     description:
       "Savor authentic Nigerian Igbo delicacies from Anna's Kitchen with instant WhatsApp ordering.",
-    images: ["https://chibuike07.github.io/annas_delicacies/og-image.jpg"],
+    images: [OG_IMAGE_URL],
   },
   robots: {
     index: true,

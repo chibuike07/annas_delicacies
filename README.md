@@ -22,8 +22,10 @@ This project is configured for static export. For GitHub Pages:
 
 1. Set `NEXT_PUBLIC_BASE_PATH` to your repository name (for example: `/annas_delicacies`).
 2. (Optional) Set `NEXT_PUBLIC_SITE_URL` to your full site origin (for example: `https://yourname.github.io`).
-3. Run `npm run build`.
-4. Deploy the `out` folder using your preferred GitHub Pages workflow.
+3. (Optional) Set `NEXT_PUBLIC_OG_IMAGE_URL` to a public PNG/JPG for WhatsApp previews.
+4. (Optional) Set `NEXT_PUBLIC_LOGO_URL` to a public PNG/JPG for structured data.
+5. Run `npm run build`.
+6. Deploy the `out` folder using your preferred GitHub Pages workflow.
 
 ## Customize
 

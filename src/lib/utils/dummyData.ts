@@ -3,7 +3,7 @@ import type {
   ICategorySection,
   IProduct,
 } from "@/components/ProductShowcase/ProductShowcase.interface";
-import { getProductDetailUrl } from "./config";
+import { getOgImageUrl, getProductDetailUrl } from "./config";
 
 export const WHATSAPP_NUMBER = "2348121485310";
 
@@ -73,7 +73,7 @@ export const products: IProduct[] = [
     price: 3500,
     promoCode: "JOLLOF10",
     promoPercent: 10,
-    image: "/products/aroma-diffuser.svg",
+    image: "/products/food-tray.png",
     category: "hot-sale",
     badge: "Customer Favorite",
   },
@@ -84,7 +84,7 @@ export const products: IProduct[] = [
     price: 4500,
     promoCode: "NKWOBI15",
     promoPercent: 15,
-    image: "/products/aura-bottle.svg",
+    image: "/products/food-tray.png",
     category: "hot-sale",
     badge: "Top Rated",
   },
@@ -93,7 +93,7 @@ export const products: IProduct[] = [
     name: "Ofe Nsala (White Soup)",
     description: "Traditional Igbo white soup with fresh fish and uziza.",
     price: 3800,
-    image: "/products/breeze-purifier.svg",
+    image: "/products/food-tray.png",
     category: "hot-sale",
     badge: "New",
   },
@@ -104,7 +104,7 @@ export const products: IProduct[] = [
     price: 2500,
     promoCode: "ABACHA8",
     promoPercent: 8,
-    image: "/products/cloud-router.svg",
+    image: "/products/food-tray.png",
     category: "hot-sale",
   },
   {
@@ -112,7 +112,7 @@ export const products: IProduct[] = [
     name: "Okpa (Bambara Nut Pudding)",
     description: "Steamed Bambara bean cake wrapped in banana leaves.",
     price: 1200,
-    image: "/products/echo-controller.svg",
+    image: "/products/food-tray.png",
     category: "hot-sale",
   },
   {
@@ -120,7 +120,7 @@ export const products: IProduct[] = [
     name: "Isi Ewu (Goat Head)",
     description: "Spiced goat head delicacy served with palm wine.",
     price: 5000,
-    image: "/products/fit-band.svg",
+    image: "/products/food-tray.png",
     category: "hot-sale",
   },
   {
@@ -130,7 +130,7 @@ export const products: IProduct[] = [
     price: 4200,
     promoCode: "EGUSI12",
     promoPercent: 12,
-    image: "/products/flow-grinder.svg",
+    image: "/products/food-tray.png",
     category: "best-sellers",
     badge: "Regular Sales",
   },
@@ -139,7 +139,7 @@ export const products: IProduct[] = [
     name: "Oha Soup",
     description: "Traditional Oha leaf soup with cocoyam paste.",
     price: 3800,
-    image: "/products/glow-hub.svg",
+    image: "/products/food-tray.png",
     category: "best-sellers",
     badge: "Everyday",
   },
@@ -150,7 +150,7 @@ export const products: IProduct[] = [
     price: 2200,
     promoCode: "UKWA5",
     promoPercent: 5,
-    image: "/products/glow-lamp.svg",
+    image: "/products/food-tray.png",
     category: "best-sellers",
   },
   {
@@ -158,7 +158,7 @@ export const products: IProduct[] = [
     name: "Nni Oka (Roasted Corn)",
     description: "Grilled corn with coconut and ube (African pear).",
     price: 1500,
-    image: "/products/halo-headphones.svg",
+    image: "/products/food-tray.png",
     category: "best-sellers",
   },
   {
@@ -168,7 +168,7 @@ export const products: IProduct[] = [
     price: 3500,
     promoCode: "ONUGBU9",
     promoPercent: 9,
-    image: "/products/luxe-watch.svg",
+    image: "/products/food-tray.png",
     category: "best-sellers",
   },
   {
@@ -176,7 +176,7 @@ export const products: IProduct[] = [
     name: "Akpu & Ofe Owerri",
     description: "Cassava fufu with Owerri-style vegetable soup.",
     price: 3200,
-    image: "/products/metro-bag.svg",
+    image: "/products/food-tray.png",
     category: "best-sellers",
   },
   {
@@ -186,7 +186,7 @@ export const products: IProduct[] = [
     price: 4000,
     promoCode: "BANGA7",
     promoPercent: 7,
-    image: "/products/neo-sneakers.svg",
+    image: "/products/food-tray.png",
     category: "popular",
     badge: "Popular",
   },
@@ -195,7 +195,7 @@ export const products: IProduct[] = [
     name: "Okro Soup & Eba",
     description: "Draw soup with assorted meat served with eba.",
     price: 2800,
-    image: "/products/nova-projector.svg",
+    image: "/products/food-tray.png",
     category: "popular",
   },
   {
@@ -203,7 +203,7 @@ export const products: IProduct[] = [
     name: "Pepper Soup (Catfish)",
     description: "Hot spicy catfish pepper soup with local spices.",
     price: 3500,
-    image: "/products/orbit-charger.svg",
+    image: "/products/food-tray.png",
     category: "popular",
   },
   {
@@ -213,7 +213,7 @@ export const products: IProduct[] = [
     price: 3200,
     promoCode: "EFO6",
     promoPercent: 6,
-    image: "/products/pulse-kit.svg",
+    image: "/products/food-tray.png",
     category: "popular",
   },
   {
@@ -221,7 +221,7 @@ export const products: IProduct[] = [
     name: "Edikang Ikong",
     description: "Vegetable soup with pumpkin leaves and waterleaf.",
     price: 4500,
-    image: "/products/pulse-speaker.svg",
+    image: "/products/food-tray.png",
     category: "popular",
   },
   {
@@ -229,7 +229,7 @@ export const products: IProduct[] = [
     name: "Afang Soup",
     description: "Traditional vegetable soup with Afang leaves.",
     price: 4200,
-    image: "/products/rise-desk.svg",
+    image: "/products/food-tray.png",
     category: "popular",
   },
   {
@@ -237,7 +237,7 @@ export const products: IProduct[] = [
     name: "Moi Moi",
     description: "Steamed bean pudding with fish and eggs.",
     price: 1000,
-    image: "/products/solar-bank.svg",
+    image: "/products/food-tray.png",
     category: "others",
     badge: "Breakfast",
   },
@@ -246,7 +246,7 @@ export const products: IProduct[] = [
     name: "Akara (Bean Cake)",
     description: "Deep-fried bean cakes, crispy and fluffy.",
     price: 800,
-    image: "/products/studio-mat.svg",
+    image: "/products/food-tray.png",
     category: "others",
   },
   {
@@ -256,7 +256,7 @@ export const products: IProduct[] = [
     price: 3000,
     promoCode: "RICE4",
     promoPercent: 4,
-    image: "/products/studio-tripod.svg",
+    image: "/products/food-tray.png",
     category: "others",
   },
   {
@@ -264,7 +264,7 @@ export const products: IProduct[] = [
     name: "Yam Porridge (Asaro)",
     description: "Mashed yam porridge with palm oil and vegetables.",
     price: 2500,
-    image: "/products/vibe-keyboard.svg",
+    image: "/products/food-tray.png",
     category: "others",
   },
   {
@@ -272,7 +272,7 @@ export const products: IProduct[] = [
     name: "Plantain & Fish Sauce",
     description: "Fried plantain with spicy tomato fish sauce.",
     price: 2000,
-    image: "/products/vista-monitor.svg",
+    image: "/products/food-tray.png",
     category: "others",
   },
   {
@@ -280,7 +280,7 @@ export const products: IProduct[] = [
     name: "Ugu Soup",
     description: "Pumpkin leaf soup with stockfish and goat meat.",
     price: 3800,
-    image: "/products/zen-chair.svg",
+    image: "/products/food-tray.png",
     category: "others",
   },
 ];
@@ -363,6 +363,11 @@ export const buildWhatsAppUrl = (
       ? getProductDetailUrl(product.id)
       : "";
 
+  const productImageUrl =
+    typeof product?.image === "string" && product.image.trim()
+      ? getOgImageUrl(product.image)
+      : "";
+
   const message = [
     "Hello, I want to buy:",
     "",
@@ -375,6 +380,7 @@ export const buildWhatsAppUrl = (
     typeof product?.promoPercent === "number" && product.promoPercent > 0
       ? `Discount: ${product.promoPercent}%`
       : "",
+    productImageUrl ? `Product Image: ${productImageUrl}` : "",
     productUrl ? `Product Link: ${productUrl}` : "",
   ]
     .filter(Boolean)
