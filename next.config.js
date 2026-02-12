@@ -1,15 +1,14 @@
 /** @type {import('next').NextConfig} */
-const basePath =
-  process.env.NEXT_PUBLIC_BASE_PATH ||
-  (process.env.NODE_ENV === "production" ? "/annas_delicacies" : "");
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const nextConfig = {
   output: "export",
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
   basePath,
-  assetPrefix: basePath,
+  assetPrefix: basePath || undefined,
   compiler: {
     styledComponents: true,
   },

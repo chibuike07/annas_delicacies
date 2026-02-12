@@ -20,9 +20,10 @@ Responsive landing page built with Next.js, TypeScript, and styled-components. I
 
 This project is configured for static export. For GitHub Pages:
 
-1. Set `NEXT_PUBLIC_BASE_PATH` to your repository name (for example: `annas_delicacies`).
-2. Run `npm run build`.
-3. Deploy the `out` folder using your preferred GitHub Pages workflow.
+1. Set `NEXT_PUBLIC_BASE_PATH` to your repository name (for example: `/annas_delicacies`).
+2. (Optional) Set `NEXT_PUBLIC_SITE_URL` to your full site origin (for example: `https://yourname.github.io`).
+3. Run `npm run build`.
+4. Deploy the `out` folder using your preferred GitHub Pages workflow.
 
 ## Customize
 

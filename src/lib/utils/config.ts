@@ -3,12 +3,11 @@
  */
 
 // Production deployment URL
-export const DEPLOYED_ORIGIN = "https://chibuike07.github.io";
+export const DEPLOYED_ORIGIN =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://chibuike07.github.io";
 
 // Base path for the application
-export const BASE_PATH =
-  process.env.NEXT_PUBLIC_BASE_PATH ||
-  (process.env.NODE_ENV === "production" ? "/annas_delicacies" : "");
+export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 // Full application URL (origin + base path)
 export const APP_URL = `${DEPLOYED_ORIGIN}${BASE_PATH}`;
