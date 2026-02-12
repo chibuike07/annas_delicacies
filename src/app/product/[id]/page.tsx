@@ -72,7 +72,7 @@ export async function generateMetadata({
 
 const PageWrapper = styled.div`
   min-height: 100vh;
-  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -120,7 +120,7 @@ const ProductContainer = styled.article`
         display: inline-block;
         padding: 0.4rem 0.8rem;
         border-radius: 999px;
-        background: rgba(234, 88, 12, 0.12);
+        background: rgba(249, 115, 22, 0.12);
         color: var(--brand-dark);
         font-weight: 600;
         font-size: 0.85rem;
@@ -130,7 +130,7 @@ const ProductContainer = styled.article`
         display: inline-block;
         padding: 0.4rem 0.8rem;
         border-radius: 999px;
-        background: rgba(22, 163, 74, 0.16);
+        background: rgba(34, 197, 94, 0.16);
         color: var(--accent);
         font-weight: 600;
         font-size: 0.85rem;

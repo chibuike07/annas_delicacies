@@ -63,4 +63,65 @@ export const Page = styled.main`
       }
     }
   }
+
+  /* STORY SECTIONS */
+  .story_sections {
+    display: grid;
+    gap: 1.75rem;
+  }
+
+  .story_section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+
+    .story_content {
+      display: grid;
+      gap: 0.75rem;
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+
+      .story_badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.35rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(249, 115, 22, 0.12);
+        color: var(--brand-dark);
+        font-weight: 600;
+        font-size: 0.78rem;
+        width: fit-content;
+      }
+    }
+
+    .story_media {
+      background: linear-gradient(135deg, var(--accent-soft), #fff7ed);
+      border-radius: 16px;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .story_media img {
+      width: min(100%, 420px);
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+    }
+  }
 `;

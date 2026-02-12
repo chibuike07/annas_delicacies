@@ -85,7 +85,7 @@ export const ProductCardWrapper = styled.article`
         font-size: 0.72rem;
         padding: 0.3rem 0.6rem;
         border-radius: 999px;
-        background: rgba(234, 88, 12, 0.12);
+        background: rgba(249, 115, 22, 0.12);
         color: var(--brand-dark);
         font-weight: 600;
       }
@@ -94,7 +94,7 @@ export const ProductCardWrapper = styled.article`
         font-size: 0.72rem;
         padding: 0.3rem 0.6rem;
         border-radius: 999px;
-        background: rgba(22, 163, 74, 0.16);
+        background: rgba(34, 197, 94, 0.16);
         color: var(--accent);
         font-weight: 600;
       }
