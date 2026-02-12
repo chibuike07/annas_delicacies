@@ -2,7 +2,7 @@
 
 ## 📋 Overview
 
-The Ngozi Product Showcase application has been comprehensively hardened against common security vulnerabilities and optimized for production deployment. All changes maintain backward compatibility while significantly improving security posture.
+The Anna Product Showcase application has been comprehensively hardened against common security vulnerabilities and optimized for production deployment. All changes maintain backward compatibility while significantly improving security posture.
 
 ---
 

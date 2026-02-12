@@ -9,9 +9,9 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "Ngozi",
-            url: "https://chibuike07.github.io/ngozi_products_site",
-            logo: "https://chibuike07.github.io/ngozi_products_site/logo.png",
+            name: "Anna",
+            url: "https://chibuike07.github.io/anna_products",
+            logo: "https://chibuike07.github.io/anna_products/logo.png",
             description:
               "Premium curated products with instant WhatsApp checkout",
             sameAs: ["https://wa.me/2348121485310"],
@@ -29,10 +29,10 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Ngozi Curated Products",
+            name: "Anna Curated Products",
             description:
               "Discover premium curated gear for bold lifestyles. Hot sales, best sellers, popular picks, and more.",
-            url: "https://chibuike07.github.io/ngozi_products_site",
+            url: "https://chibuike07.github.io/anna_products",
             mainEntity: {
               "@type": "Product",
               name: "Curated Product Collection",

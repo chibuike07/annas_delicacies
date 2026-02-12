@@ -3,37 +3,37 @@ import StyledComponentsRegistry from "@/lib/styled-components-registry";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ngozi - Premium Curated Products | Instant WhatsApp Checkout",
+  title: "Anna - Premium Curated Products | Instant WhatsApp Checkout",
   description:
     "Shop premium curated gear for bold lifestyles. Explore hot sales, best sellers, popular picks, and more with instant WhatsApp checkout. Fast, secure, and convenient shopping experience.",
   keywords:
     "curated products, instant checkout, WhatsApp shopping, premium gear, best sellers",
-  authors: [{ name: "Ngozi" }],
-  creator: "Ngozi",
-  publisher: "Ngozi",
+  authors: [{ name: "Anna" }],
+  creator: "Anna",
+  publisher: "Anna",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://chibuike07.github.io/ngozi_products_site",
-    siteName: "Ngozi",
-    title: "Ngozi - Premium Curated Products | Instant WhatsApp Checkout",
+    url: "https://chibuike07.github.io/anna_products",
+    siteName: "Anna",
+    title: "Anna - Premium Curated Products | Instant WhatsApp Checkout",
     description:
       "Shop premium curated gear for bold lifestyles with instant WhatsApp checkout.",
     images: [
       {
-        url: "https://chibuike07.github.io/ngozi_products_site/og-image.jpg",
+        url: "https://chibuike07.github.io/anna_products/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Ngozi Store - Premium Curated Products",
+        alt: "Anna Store - Premium Curated Products",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ngozi - Premium Curated Products | Instant WhatsApp Checkout",
+    title: "Anna - Premium Curated Products | Instant WhatsApp Checkout",
     description:
       "Shop premium curated gear for bold lifestyles with instant WhatsApp checkout.",
-    images: ["https://chibuike07.github.io/ngozi_products_site/og-image.jpg"],
+    images: ["https://chibuike07.github.io/anna_products/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://chibuike07.github.io/ngozi_products_site",
+    canonical: "https://chibuike07.github.io/anna_products",
   },
   viewport: "width=device-width, initial-scale=1, maximum-scale=5",
 };

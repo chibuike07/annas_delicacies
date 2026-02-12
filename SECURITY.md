@@ -1,6 +1,6 @@
 # Security & Production Hardening
 
-This document outlines the security measures and production-readiness improvements implemented in the Ngozi Product Showcase application.
+This document outlines the security measures and production-readiness improvements implemented in the Anna Product Showcase application.
 
 ## 🔒 Security Fixes Applied
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Ngozi Product Showcase has been enhanced with:
+The Anna Product Showcase has been enhanced with:
 
 - ✅ **Absolute image URLs** for WhatsApp and external accessibility
 - ✅ **Dynamic product detail pages** with unique URLs
@@ -18,7 +18,7 @@ The Ngozi Product Showcase has been enhanced with:
 #### What Changed
 
 - Images now use fully qualified URLs instead of relative paths
-- Format: `https://chibuike07.github.io/ngozi_products_site/products/{image}.svg`
+- Format: `https://chibuike07.github.io/anna_products/products/{image}.svg`
 - Accessible from WhatsApp, emails, social media, and external sources
 
 #### Implementation Files
@@ -37,7 +37,7 @@ The Ngozi Product Showcase has been enhanced with:
 /products/zen-chair.svg
 
 // After (absolute):
-https://chibuike07.github.io/ngozi_products_site/products/zen-chair.svg
+https://chibuike07.github.io/anna_products/products/zen-chair.svg
 ```
 
 ---
@@ -94,7 +94,7 @@ When a customer clicks "Buy on WhatsApp":
    Category: Best Sellers
    Promo Code: ZEN12
    Discount: 12%
-   Product Link: https://chibuike07.github.io/ngozi_products_site/product/best-1
+  Product Link: https://chibuike07.github.io/anna_products/product/best-1
    ```
 
 2. **Customer receives message** with product link
@@ -148,11 +148,11 @@ export const APP_URL = `${DEPLOYED_ORIGIN}${BASE_PATH}`;
 
 export const getAbsoluteImageUrl = (imagePath: string): string
   // Validates path starts with "/"
-  // Returns: https://chibuike07.github.io/ngozi_products_site{imagePath}
+  // Returns: https://chibuike07.github.io/anna_products{imagePath}
 
 export const getProductDetailUrl = (productId: string): string
   // Creates deep link to product detail page
-  // Returns: https://chibuike07.github.io/ngozi_products_site/product/{id}
+  // Returns: https://chibuike07.github.io/anna_products/product/{id}
 
 export const getProductImageUrl = (imagePath: string): string
   // Alias for getAbsoluteImageUrl
@@ -165,17 +165,17 @@ export const getProductImageUrl = (imagePath: string): string
 
 ### Deployment URLs
 
-- **Main Site**: https://chibuike07.github.io/ngozi_products_site
-- **Product List**: https://chibuike07.github.io/ngozi_products_site#categories
-- **Product Detail**: https://chibuike07.github.io/ngozi_products_site/product/best-1
-- **Image URL**: https://chibuike07.github.io/ngozi_products_site/products/zen-chair.svg
+- **Main Site**: https://chibuike07.github.io/anna_products
+- **Product List**: https://chibuike07.github.io/anna_products#categories
+- **Product Detail**: https://chibuike07.github.io/anna_products/product/best-1
+- **Image URL**: https://chibuike07.github.io/anna_products/products/zen-chair.svg
 
 ### WhatsApp Integration
 
 ```
 User sends inquiry for "Zen Ergonomic Chair"
     ↓
-Message includes: https://chibuike07.github.io/ngozi_products_site/product/best-1
+Message includes: https://chibuike07.github.io/anna_products/product/best-1
     ↓
 Vendor receives message with product link
     ↓
@@ -228,7 +228,7 @@ Each product page has:
   "image": "https://...",
   "price": 98000,
   "priceCurrency": "NGN",
-  "brand": { "name": "Ngozi" },
+  "brand": { "name": "Anna" },
   "offers": {
     "price": 98000,
     "priceCurrency": "NGN",
@@ -275,9 +275,9 @@ Optional: Click Buy button → WhatsApp with product link
 
 ```
 GitHub Pages
-├── Root: chibuike07.github.io/ngozi_products_site
-├── Images: chibuike07.github.io/ngozi_products_site/products/*.svg
-├── Products: chibuike07.github.io/ngozi_products_site/product/[id]
+├── Root: chibuike07.github.io/anna_products
+├── Images: chibuike07.github.io/anna_products/products/*.svg
+├── Products: chibuike07.github.io/anna_products/product/[id]
 ```
 
 ---
@@ -399,7 +399,7 @@ Total Price: ₦98,000.00
 Category: Best Sellers
 Promo Code: ZEN12
 Discount: 12%
-Product Link: https://chibuike07.github.io/ngozi_products_site/product/best-1
+Product Link: https://chibuike07.github.io/anna_products/product/best-1
 ```
 
 Vendor receives this message and can:

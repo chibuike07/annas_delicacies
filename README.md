@@ -1,4 +1,4 @@
-# Ngozi Product Showcase
+# Anna Product Showcase
 
 Responsive landing page built with Next.js, TypeScript, and styled-components. It showcases premium curated products by category and enables instant checkout via WhatsApp integration.
 
@@ -15,7 +15,7 @@ Responsive landing page built with Next.js, TypeScript, and styled-components. I
 
 This project is configured for static export. For GitHub Pages:
 
-1. Set `NEXT_PUBLIC_BASE_PATH` to your repository name (for example: `ngozi_products_site`).
+1. Set `NEXT_PUBLIC_BASE_PATH` to your repository name (for example: `anna_products`).
 2. Run `npm run build`.
 3. Deploy the `out` folder using your preferred GitHub Pages workflow.
 

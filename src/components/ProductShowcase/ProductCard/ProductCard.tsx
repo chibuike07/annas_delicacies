@@ -84,7 +84,7 @@ export default function ProductCard({
         <Link href={`/product/${product.id}`}>
           <Image
             src={resolveImageUrl(product.image)}
-            alt={`${sanitizeText(product.name)} - Premium curated product from Ngozi`}
+            alt={`${sanitizeText(product.name)} - Premium curated product from Anna`}
             title={sanitizeText(product.name)}
             width={520}
             height={340}

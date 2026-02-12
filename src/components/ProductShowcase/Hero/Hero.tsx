@@ -6,7 +6,7 @@ export default function Hero({}: IHeroProps) {
   return (
     <HeroSection>
       <div className="hero_content">
-        <h1>Meet Ngozi — curated gear for bold lifestyles.</h1>
+        <h1>Meet Anna — curated gear for bold lifestyles.</h1>
         <p>
           Explore hot sales, best sellers, and popular picks. Every product
           includes instant WhatsApp checkout so you can purchase in seconds.

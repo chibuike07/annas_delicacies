@@ -37,7 +37,7 @@ export async function generateMetadata({
   const productPageUrl = getProductDetailUrl(product.id);
 
   return {
-    title: `${product.name} | Ngozi`,
+    title: `${product.name} | Anna`,
     description: product.description,
     keywords: [product.name, product.badge || "", "curated products"].filter(
       Boolean,
@@ -250,7 +250,7 @@ export default function ProductDetailPage({ params }: IProductDetailPageProps) {
   const productImageUrl = getAbsoluteImageUrl(product.image);
   const productPageUrl = getProductDetailUrl(product.id);
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    `Hi, I'm interested in the "${product.name}" from Ngozi. Price: ${formatter.format(product.price)}. View product: ${productPageUrl}`,
+    `Hi, I'm interested in the "${product.name}" from Anna. Price: ${formatter.format(product.price)}. View product: ${productPageUrl}`,
   )}`;
 
   return (
@@ -269,7 +269,7 @@ export default function ProductDetailPage({ params }: IProductDetailPageProps) {
               priceCurrency: "NGN",
               brand: {
                 "@type": "Brand",
-                name: "Ngozi",
+                name: "Anna",
               },
               offers: {
                 "@type": "Offer",
