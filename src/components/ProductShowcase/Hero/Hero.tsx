@@ -6,7 +6,9 @@ const Hero = ({}: IHeroProps) => {
   return (
     <HeroSection>
       <div className="hero_content">
-        <h1>Welcome to Ann's Kitchen — Authentic Nigerian Igbo Cuisine.</h1>
+        <h1>
+          Welcome to Ann&apos;s Kitchen — Authentic Nigerian Igbo Cuisine.
+        </h1>
         <p>
           Experience traditional Igbo delicacies prepared with love and
           authentic ingredients. Order your favorite soups, fufu, and delicacies

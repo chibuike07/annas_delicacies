@@ -15,10 +15,7 @@ interface QuantityActionsProps {
   categoryTitle: string;
 }
 
-const QuantityActions = ({
-  product,
-  categoryTitle,
-}: QuantityActionsProps) => {
+const QuantityActions = ({ product, categoryTitle }: QuantityActionsProps) => {
   const [quantity, setQuantity] = useState(1);
   const [inputError, setInputError] = useState(false);
 
