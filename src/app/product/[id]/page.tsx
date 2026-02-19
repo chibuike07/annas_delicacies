@@ -33,7 +33,7 @@ export async function generateMetadata({
   const productPageUrl = getProductDetailUrl(product.id);
 
   return {
-    title: `${product.name} | Anna's Delicacies`,
+    title: `${product.name} | Ann's SoleCraft Studio`,
     description: product.description,
     keywords: [product.name, product.badge || "", "curated products"].filter(
       Boolean,
@@ -41,7 +41,7 @@ export async function generateMetadata({
     openGraph: {
       type: "article",
       url: productPageUrl,
-      siteName: "Anna's Delicacies",
+      siteName: "Ann's SoleCraft Studio",
       title: product.name,
       description: product.description,
       images: [

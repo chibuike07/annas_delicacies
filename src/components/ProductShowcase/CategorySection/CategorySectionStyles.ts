@@ -12,7 +12,7 @@ export const CategorySectionWrapper = styled.div`
     }
 
     .subtitle {
-      color: var(--muted);
+      color: var(--highlight);
       font-size: 0.95rem;
     }
   }
@@ -21,6 +21,9 @@ export const CategorySectionWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
+    background: var(--surface);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.06);
   }
 
   .load_more_row {
@@ -29,9 +32,9 @@ export const CategorySectionWrapper = styled.div`
     margin-top: 0.9rem;
 
     button {
-      border: 1px solid var(--border);
-      background: #fff;
-      color: var(--text);
+      border: 2px solid var(--accent);
+      background: var(--surface);
+      color: var(--highlight);
       border-radius: 999px;
       padding: 0.65rem 1.4rem;
       font-size: 0.95rem;
@@ -39,10 +42,14 @@ export const CategorySectionWrapper = styled.div`
       cursor: pointer;
       transition:
         border 0.2s ease,
+        background 0.2s,
+        color 0.2s,
         transform 0.2s ease;
 
       &:hover {
-        border-color: var(--brand);
+        background: var(--accent);
+        color: var(--text);
+        border-color: var(--highlight);
         transform: translateY(-1px);
       }
     }

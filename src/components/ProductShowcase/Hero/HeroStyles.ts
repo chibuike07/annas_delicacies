@@ -1,18 +1,11 @@
 import styled from "styled-components";
 
 export const HeroSection = styled.div`
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(22, 163, 74, 0.22),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at bottom right,
-      rgba(74, 222, 128, 0.18),
-      transparent 50%
-    ),
-    linear-gradient(135deg, #ffffff 0%, #f0fdf4 55%, #dcfce7 100%);
+  background: linear-gradient(
+    135deg,
+    var(--surface) 0%,
+    var(--accent-soft) 100%
+  );
   border: 1px solid var(--border);
   border-radius: 24px;
   padding: 3rem 6%;
@@ -55,25 +48,28 @@ export const HeroSection = styled.div`
         border-radius: 999px;
         font-size: 1rem;
         font-weight: 600;
-        box-shadow: 0 10px 25px rgba(22, 163, 74, 0.35);
+        box-shadow: 0 10px 25px rgba(31, 170, 89, 0.18);
         transition:
           transform 0.2s ease,
-          box-shadow 0.2s ease;
+          box-shadow 0.2s ease,
+          background 0.2s;
 
         &:hover {
+          background: var(--highlight);
+          color: var(--text);
           transform: translateY(-2px);
-          box-shadow: 0 14px 35px rgba(21, 128, 61, 0.35);
+          box-shadow: 0 14px 35px rgba(255, 215, 0, 0.18);
         }
       }
 
       .ghost_btn {
         border: 1px solid var(--border);
-        color: var(--text);
+        color: var(--brand);
         padding: 0.85rem 1.6rem;
         border-radius: 999px;
         font-size: 1rem;
         font-weight: 600;
-        background: #fff;
+        background: var(--surface);
         transition:
           border 0.2s ease,
           transform 0.2s ease;

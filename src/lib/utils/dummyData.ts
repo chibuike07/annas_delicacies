@@ -3,11 +3,9 @@ import type {
   ICategorySection,
   IProduct,
 } from "@/components/ProductShowcase/ProductShowcase.interface";
-import { getOgImageUrl, getProductDetailUrl } from "./config";
+import { getProductDetailUrl } from "./config";
 
 export const WHATSAPP_NUMBER = "2348121485310";
-
-const imageFor = (id: string): string => `/products/${id}.png`;
 
 // Maximum quantity allowed per order
 export const MAX_QUANTITY = 100;
@@ -70,219 +68,262 @@ export const isValidWhatsAppNumber = (number: string): boolean => {
 export const products: IProduct[] = [
   {
     id: "hot_1",
-    name: "Jollof Rice Combo",
-    description: "Classic Nigerian jollof rice with chicken and plantain.",
+    name: "Lagos Night Block Heels",
+    description:
+      "Statement block heels handcrafted in Lagos for night outings, weddings and owambe events.",
     price: 3500,
-    promoCode: "JOLLOF10",
+    promoCode: "LAGOS10",
     promoPercent: 10,
-    image: imageFor("hot_1"),
+    // TODO: replace with your own hosted image URL (e.g. Unsplash/CDN)
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Designer+Heels",
     category: "hot-sale",
     badge: "Customer Favorite",
   },
   {
     id: "hot_2",
-    name: "Nkwobi Deluxe",
-    description: "Spicy cow foot delicacy cooked in traditional Igbo style.",
+    name: "Abuja Heritage Loafers",
+    description:
+      "Premium full-grain leather loafers with subtle stitching, perfect for Abuja offices and meetings.",
     price: 4500,
-    promoCode: "NKWOBI15",
+    promoCode: "ABUJA15",
     promoPercent: 15,
-    image: imageFor("hot_2"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Leather+Loafers",
     category: "hot-sale",
     badge: "Top Rated",
   },
   {
     id: "hot_3",
-    name: "Ofe Nsala (White Soup)",
-    description: "Traditional Igbo white soup with fresh fish and uziza.",
+    name: "Enugu Street Sneakers",
+    description:
+      "Lightweight everyday sneakers inspired by Enugu city streets, great for all-day comfort.",
     price: 3800,
-    image: imageFor("hot_3"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Street+Sneakers",
     category: "hot-sale",
     badge: "New",
   },
   {
     id: "hot_4",
-    name: "Abacha & Ugba (African Salad)",
-    description: "Authentic African salad with garden egg and stockfish.",
+    name: "Ankara Strap Slides",
+    description:
+      "Bold Ankara-print strap slides with cushioned sole for quick runs and casual outings.",
     price: 2500,
     promoCode: "ABACHA8",
     promoPercent: 8,
-    image: imageFor("hot_4"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Ankara+Slides",
     category: "hot-sale",
   },
   {
     id: "hot_5",
-    name: "Okpa (Bambara Nut Pudding)",
-    description: "Steamed Bambara bean cake wrapped in banana leaves.",
+    name: "Everyday Comfort Mules",
+    description:
+      "Soft padded mules with low heels for easy wear around the office and city.",
     price: 1200,
-    image: imageFor("hot_5"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Comfort+Mules",
     category: "hot-sale",
   },
   {
     id: "hot_6",
-    name: "Isi Ewu (Goat Head)",
-    description: "Spiced goat head delicacy served with palm wine.",
+    name: "Owambe Oxford Brogues",
+    description:
+      "Classic Oxford brogues with detailed perforations, built for owambe outfits and native attires.",
     price: 5000,
-    image: imageFor("hot_6"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Oxford+Brogues",
     category: "hot-sale",
   },
   {
     id: "best_1",
-    name: "Egusi Soup & Pounded Yam",
-    description: "Rich melon seed soup with assorted meat and stockfish.",
+    name: "Victoria Island Classic Pumps",
+    description:
+      "Timeless pointed-toe pumps for Lagos offices, boardrooms and evening dinners.",
     price: 4200,
-    promoCode: "EGUSI12",
+    promoCode: "VI12",
     promoPercent: 12,
-    image: imageFor("best_1"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Classic+Pumps",
     category: "best-sellers",
     badge: "Regular Sales",
   },
   {
     id: "best_2",
-    name: "Oha Soup",
-    description: "Traditional Oha leaf soup with cocoyam paste.",
+    name: "Abuja Court Sandals",
+    description:
+      "Minimalist strappy sandals with secure ankle support for court, office and formal occasions.",
     price: 3800,
-    image: imageFor("best_2"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Strappy+Sandals",
     category: "best-sellers",
     badge: "Everyday",
   },
   {
     id: "best_3",
-    name: "Ukwa (African Breadfruit)",
-    description: "Steamed breadfruit porridge with palm oil sauce.",
+    name: "Mainland Driving Loafers",
+    description:
+      "Soft-soled driving loafers designed for Lagos traffic, long drives and weekend hangouts.",
     price: 2200,
-    promoCode: "UKWA5",
+    promoCode: "DRIVE5",
     promoPercent: 5,
-    image: imageFor("best_3"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Driving+Loafers",
     category: "best-sellers",
   },
   {
     id: "best_4",
-    name: "Nni Oka (Roasted Corn)",
-    description: "Grilled corn with coconut and ube (African pear).",
+    name: "Uni Campus Sneakers",
+    description:
+      "Versatile sneakers built for campus life, lectures, hostel runs and hangouts.",
     price: 1500,
-    image: imageFor("best_4"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Campus+Sneakers",
     category: "best-sellers",
   },
   {
     id: "best_5",
-    name: "Onugbu Soup (Bitter Leaf)",
-    description: "Nutritious bitter leaf soup with cocoyam and fish.",
+    name: "Ankara Block Heels",
+    description:
+      "Colorful Ankara block heels that balance height and comfort for parties and church.",
     price: 3500,
-    promoCode: "ONUGBU9",
+    promoCode: "ANKARA9",
     promoPercent: 9,
-    image: imageFor("best_5"),
+    image: "https://dummyimage.com/800x800/020617/ffffff.png&text=Ankara+Heels",
     category: "best-sellers",
   },
   {
     id: "best_6",
-    name: "Akpu & Ofe Owerri",
-    description: "Cassava fufu with Owerri-style vegetable soup.",
+    name: "Owerri City Platforms",
+    description:
+      "Chunky platform heels with steady grip, inspired by Owerri nightlife and celebrations.",
     price: 3200,
-    image: imageFor("best_6"),
+    image: "https://dummyimage.com/800x800/020617/ffffff.png&text=Block+Heels",
     category: "best-sellers",
   },
   {
     id: "pop_1",
-    name: "Banga Soup",
-    description: "Palm nut soup with catfish and traditional spices.",
+    name: "Port Harcourt Street Sneaker",
+    description:
+      "Sporty street sneaker with breathable mesh for Port Harcourt weather and outdoor events.",
     price: 4000,
-    promoCode: "BANGA7",
+    promoCode: "PH7",
     promoPercent: 7,
-    image: imageFor("pop_1"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Street+Sneaker",
     category: "popular",
     badge: "Popular",
   },
   {
     id: "pop_2",
-    name: "Okro Soup & Eba",
-    description: "Draw soup with assorted meat served with eba.",
+    name: "Everyday Slide Sandals",
+    description:
+      "Simple everyday slides with durable sole, perfect for quick errands and home use.",
     price: 2800,
-    image: imageFor("pop_2"),
+    image: "https://dummyimage.com/800x800/020617/ffffff.png&text=Slides",
     category: "popular",
   },
   {
     id: "pop_3",
-    name: "Pepper Soup (Catfish)",
-    description: "Hot spicy catfish pepper soup with local spices.",
+    name: "Rainy Day Ankle Boots",
+    description:
+      "Weather-friendly ankle boots with firm grip for rainy Lagos and muddy streets.",
     price: 3500,
-    image: imageFor("pop_3"),
+    image: "https://dummyimage.com/800x800/020617/ffffff.png&text=Ankle+Boots",
     category: "popular",
   },
   {
     id: "pop_4",
-    name: "Efo Riro",
-    description: "Vegetable soup with assorted meat and crayfish.",
+    name: "Courtroom Comfort Sneakers",
+    description:
+      "Low-profile sneakers styled to pair with smart casual outfits and workwear.",
     price: 3200,
-    promoCode: "EFO6",
+    promoCode: "COURT6",
     promoPercent: 6,
-    image: imageFor("pop_4"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Court+Sneakers",
     category: "popular",
   },
   {
     id: "pop_5",
-    name: "Edikang Ikong",
-    description: "Vegetable soup with pumpkin leaves and waterleaf.",
+    name: "Lekki Platform Heels",
+    description:
+      "High platform heels with padded insole for nights out in Lekki and VI.",
     price: 4500,
-    image: imageFor("pop_5"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Platform+Heels",
     category: "popular",
   },
   {
     id: "pop_6",
-    name: "Afang Soup",
-    description: "Traditional vegetable soup with Afang leaves.",
+    name: "Monk Strap Dress Shoes",
+    description:
+      "Elegant monk strap dress shoes that complete native or corporate looks.",
     price: 4200,
-    image: imageFor("pop_6"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Monk+Strap+Shoes",
     category: "popular",
   },
   {
     id: "other_1",
-    name: "Moi Moi",
-    description: "Steamed bean pudding with fish and eggs.",
+    name: "Essential Shoe Care Kit",
+    description:
+      "Cleaning brushes, conditioner and shine cloth to keep your SoleCraft pairs fresh.",
     price: 1000,
-    image: imageFor("other_1"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Shoe+Care+Kit",
     category: "others",
-    badge: "Breakfast",
+    badge: "Care Essentials",
   },
   {
     id: "other_2",
-    name: "Akara (Bean Cake)",
-    description: "Deep-fried bean cakes, crispy and fluffy.",
+    name: "Cedar Shoe Trees",
+    description:
+      "Cedar wood shoe trees that maintain shape, absorb moisture and extend shoe life.",
     price: 800,
-    image: imageFor("other_2"),
+    image: "https://dummyimage.com/800x800/020617/ffffff.png&text=Shoe+Trees",
     category: "others",
   },
   {
     id: "other_3",
-    name: "Fried Rice & Chicken",
-    description: "Nigerian-style fried rice with grilled chicken.",
+    name: "Anti-Scuff Sole Guards",
+    description:
+      "Slim sole protectors that reduce scuffing on your favorite heels and loafers.",
     price: 3000,
-    promoCode: "RICE4",
+    promoCode: "SOLE4",
     promoPercent: 4,
-    image: imageFor("other_3"),
+    image: "https://dummyimage.com/800x800/020617/ffffff.png&text=Sole+Guards",
     category: "others",
   },
   {
     id: "other_4",
-    name: "Yam Porridge (Asaro)",
-    description: "Mashed yam porridge with palm oil and vegetables.",
+    name: "Cushion Insole Pack",
+    description:
+      "Soft cushion insoles for extra comfort in heels, sneakers and flats.",
     price: 2500,
-    image: imageFor("other_4"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Cushion+Insoles",
     category: "others",
   },
   {
     id: "other_5",
-    name: "Plantain & Fish Sauce",
-    description: "Fried plantain with spicy tomato fish sauce.",
+    name: "Travel Dust Bags (Set)",
+    description:
+      "Soft dust bags that protect your shoes in travel boxes and wardrobes.",
     price: 2000,
-    image: imageFor("other_5"),
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Shoe+Dust+Bags",
     category: "others",
   },
   {
     id: "other_6",
-    name: "Ugu Soup",
-    description: "Pumpkin leaf soup with stockfish and goat meat.",
-    price: 3800,
-    image: imageFor("other_6"),
+    name: "Premium Laces & Buckles Kit",
+    description:
+      "Replacement laces and buckles in multiple colors to refresh your favorite pairs.",
+    price: 1500,
+    image:
+      "https://dummyimage.com/800x800/020617/ffffff.png&text=Laces+%26+Buckles",
     category: "others",
   },
 ];
@@ -290,26 +331,27 @@ export const products: IProduct[] = [
 export const categories: ICategorySection[] = [
   {
     id: "hot-sale",
-    title: "Hot Sale",
-    subtitle: "Most ordered dishes with special discounts.",
+    title: "New Arrivals",
+    subtitle: "Fresh Nigerian designer drops with launch discounts.",
     items: products.filter((product) => product.category === "hot-sale"),
   },
   {
     id: "best-sellers",
-    title: "Regular Sales",
-    subtitle: "Traditional favorites loved by our customers.",
+    title: "Best Sellers",
+    subtitle: "Pairs our customers reorder the most across Nigeria.",
     items: products.filter((product) => product.category === "best-sellers"),
   },
   {
     id: "popular",
-    title: "Popular",
-    subtitle: "Highly rated Igbo delicacies.",
+    title: "Street Favorites",
+    subtitle: "Most-loved shoes for Lagos streets, campuses and events.",
     items: products.filter((product) => product.category === "popular"),
   },
   {
     id: "others",
-    title: "Others",
-    subtitle: "More delicious options from Ann's Kitchen.",
+    title: "Care & Accessories",
+    subtitle:
+      "Shoe care kits, insoles and travel accessories from Ann's SoleCraft Studio.",
     items: products.filter((product) => product.category === "others"),
   },
 ];

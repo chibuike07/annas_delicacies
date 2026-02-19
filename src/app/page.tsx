@@ -10,11 +10,11 @@ const HomePage = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "Anna's Kitchen",
-            url: "https://chibuike07.github.io/annas_delicacies",
+            name: "Ann's SoleCraft Studio",
+            url: "https://chibuike07.github.io/annas_solecraft_studio",
             logo: LOGO_URL,
             description:
-              "Premium curated products with instant WhatsApp checkout",
+              "Designer shoes handcrafted for Nigerian streets and events with instant WhatsApp checkout",
             sameAs: ["https://wa.me/2348121485310"],
             contactPoint: {
               "@type": "ContactPoint",
@@ -30,15 +30,15 @@ const HomePage = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Anna's Kitchen Delicacies",
+            name: "Ann's SoleCraft Studio Collection",
             description:
-              "Discover authentic Nigerian Igbo delicacies. Fresh soups, swallows, proteins, and more traditional meals.",
-            url: "https://chibuike07.github.io/annas_delicacies",
+              "Discover Nigerian designer shoes: heels, loafers, sneakers and sandals crafted for Lagos, Abuja and beyond.",
+            url: "https://chibuike07.github.io/annas_solecraft_studio",
             mainEntity: {
               "@type": "Product",
-              name: "Curated Product Collection",
+              name: "Curated Designer Shoe Collection",
               description:
-                "Explore 40+ carefully selected products across multiple categories",
+                "Explore 40+ carefully selected designer shoes and accessories across multiple categories",
             },
           }),
         }}

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Anna Product Showcase has been enhanced with:
+The Ann's SoleCraft Studio product showcase has been enhanced with:
 
 - ✅ **Absolute image URLs** for WhatsApp and external accessibility
 - ✅ **Dynamic product detail pages** with unique URLs
@@ -18,7 +18,7 @@ The Anna Product Showcase has been enhanced with:
 #### What Changed
 
 - Images now use fully qualified URLs instead of relative paths
-- Format: `https://chibuike07.github.io/annas_delicacies/products/{image}.png`
+- Format: `https://chibuike07.github.io/annas_solecraft_studio/products/{image}.png`
 - Accessible from WhatsApp, emails, social media, and external sources
 
 #### Implementation Files
@@ -27,7 +27,6 @@ The Anna Product Showcase has been enhanced with:
   - `DEPLOYED_ORIGIN` = `"https://chibuike07.github.io"`
   - `APP_URL` = Origin + Base Path
   - `getAbsoluteImageUrl()` - Converts relative paths to absolute URLs
-  - `getProductImageUrl()` - Specifically for images
   - `getProductDetailUrl()` - Creates deep links to product pages
 
 #### Example
@@ -37,7 +36,7 @@ The Anna Product Showcase has been enhanced with:
 /products/best_1.png
 
 // After (absolute):
-https://chibuike07.github.io/annas_delicacies/products/best_1.png
+https://chibuike07.github.io/annas_solecraft_studio/products/best_1.png
 ```
 
 ---
@@ -94,7 +93,7 @@ When a customer clicks "Buy on WhatsApp":
    Category: Best Sellers
    Promo Code: ZEN12
    Discount: 12%
-   Product Link: https://chibuike07.github.io/annas_delicacies/product/best_1
+   Product Link: https://chibuike07.github.io/annas_solecraft_studio/product/best_1
    ```
 
 2. **Customer receives message** with product link
@@ -148,15 +147,12 @@ export const APP_URL = `${DEPLOYED_ORIGIN}${BASE_PATH}`;
 
 export const getAbsoluteImageUrl = (imagePath: string): string
   // Validates path starts with "/"
-  // Returns: https://chibuike07.github.io/annas_delicacies{imagePath}
+  // Returns: https://chibuike07.github.io/annas_solecraft_studio{imagePath}
 
 export const getProductDetailUrl = (productId: string): string
   // Creates deep link to product detail page
-  // Returns: https://chibuike07.github.io/annas_delicacies/product/{id}
+  // Returns: https://chibuike07.github.io/annas_solecraft_studio/product/{id}
 
-export const getProductImageUrl = (imagePath: string): string
-  // Alias for getAbsoluteImageUrl
-  // Used for og:image meta tags
 ```
 
 ---
@@ -165,17 +161,17 @@ export const getProductImageUrl = (imagePath: string): string
 
 ### Deployment URLs
 
-- **Main Site**: https://chibuike07.github.io/annas_delicacies
-- **Product List**: https://chibuike07.github.io/annas_delicacies#categories
-- **Product Detail**: https://chibuike07.github.io/annas_delicacies/product/best_1
-- **Image URL**: https://chibuike07.github.io/annas_delicacies/products/best_1.png
+- **Main Site**: https://chibuike07.github.io/annas_solecraft_studio
+- **Product List**: https://chibuike07.github.io/annas_solecraft_studio#categories
+- **Product Detail**: https://chibuike07.github.io/annas_solecraft_studio/product/best_1
+- **Image URL**: https://chibuike07.github.io/annas_solecraft_studio/products/best_1.png
 
 ### WhatsApp Integration
 
 ```
 User sends inquiry for "Zen Ergonomic Chair"
     ↓
-Message includes: https://chibuike07.github.io/annas_delicacies/product/best_1
+Message includes: https://chibuike07.github.io/annas_solecraft_studio/product/best_1
     ↓
 Vendor receives message with product link
     ↓
@@ -275,9 +271,9 @@ Optional: Click Buy button → WhatsApp with product link
 
 ```
 GitHub Pages
-├── Root: chibuike07.github.io/annas_delicacies
-├── Images: chibuike07.github.io/annas_delicacies/products/*.png
-├── Products: chibuike07.github.io/annas_delicacies/product/[id]
+├── Root: chibuike07.github.io/annas_solecraft_studio
+├── Images: chibuike07.github.io/annas_solecraft_studio/products/*.png
+├── Products: chibuike07.github.io/annas_solecraft_studio/product/[id]
 ```
 
 ---
@@ -399,7 +395,7 @@ Total Price: ₦98,000.00
 Category: Best Sellers
 Promo Code: ZEN12
 Discount: 12%
-Product Link: https://chibuike07.github.io/annas_delicacies/product/best_1
+Product Link: https://chibuike07.github.io/annas_solecraft_studio/product/best_1
 ```
 
 Vendor receives this message and can:

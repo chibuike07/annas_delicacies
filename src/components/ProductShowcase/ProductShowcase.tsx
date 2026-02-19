@@ -58,18 +58,19 @@ const ProductShowcase = () => {
                 <div className="story_section">
                   <div className="story_content">
                     <span className="story_badge">Animated spotlight</span>
-                    <h3>Anna&apos;s delicacies on the big board</h3>
+                    <h3>Ann&apos;s SoleCraft on the big board</h3>
                     <p>
-                      A playful animated scene highlighting our best plates on a
-                      billboard — perfect for social shares and homepage energy.
+                      A playful animated scene highlighting our boldest shoe
+                      designs on a billboard — perfect for social shares and
+                      homepage energy.
                     </p>
                   </div>
                   <div className="story_media">
                     <Image
                       src={getPublicAssetPath(
-                        "/animations/animated-spotlight.png",
+                        "https://dummyimage.com/800x480/020617/ffffff.png&text=Ann%27s+SoleCraft+Billboard",
                       )}
-                      alt="Food tray spotlighted on a billboard"
+                      alt="Designer sneakers spotlighted on a Lagos billboard"
                       width={420}
                       height={280}
                       className="story_image"
@@ -81,8 +82,10 @@ const ProductShowcase = () => {
                 <div className="story_section">
                   <div className="story_media">
                     <Image
-                      src={getPublicAssetPath("/animations/fresh-tasty.png")}
-                      alt="Fresh and tasty Nigerian meal spread"
+                      src={getPublicAssetPath(
+                        "https://dummyimage.com/800x480/020617/ffffff.png&text=Ann%27s+SoleCraft+Collection",
+                      )}
+                      alt="Curated Nigerian designer shoe collection"
                       width={420}
                       height={280}
                       className="story_image"
@@ -90,12 +93,12 @@ const ProductShowcase = () => {
                     />
                   </div>
                   <div className="story_content">
-                    <span className="story_badge">Fresh &amp; tasty</span>
-                    <h3>Fresh meals, warm vibes</h3>
+                    <span className="story_badge">Everyday comfort</span>
+                    <h3>Comfort that turns heads</h3>
                     <p>
                       Another animated highlight section to keep the landing
-                      page lively and reinforce the premium, authentic taste
-                      experience.
+                      page lively and reinforce the premium comfort and street
+                      style experience of our shoes.
                     </p>
                   </div>
                 </div>

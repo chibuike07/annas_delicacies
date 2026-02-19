@@ -9,7 +9,7 @@ export const BASE_PATH = RAW_BASE_PATH === "/" ? "" : RAW_BASE_PATH;
 // Production deployment URL
 const RAW_ORIGIN =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://chibuike07.github.io/annas_delicacies";
+  "https://chibuike07.github.io/annas_solecraft_studio";
 const NORMALIZED_ORIGIN = RAW_ORIGIN.replace(/\/+$/, "");
 const ORIGIN_WITHOUT_BASE_PATH =
   BASE_PATH && NORMALIZED_ORIGIN.endsWith(BASE_PATH)
@@ -21,7 +21,7 @@ export const DEPLOYED_ORIGIN = ORIGIN_WITHOUT_BASE_PATH;
 // Open Graph image URL (must be a publicly accessible PNG/JPG for WhatsApp previews)
 export const OG_IMAGE_URL =
   process.env.NEXT_PUBLIC_OG_IMAGE_URL ||
-  "https://dummyimage.com/1200x630/0f172a/ffffff.png&text=Anna%27s+Kitchen";
+  "https://dummyimage.com/1200x630/0f172a/ffffff.png&text=Ann%27s+SoleCraft+Studio+Shoes";
 
 // Logo URL (optional, must be a publicly accessible image)
 export const LOGO_URL = process.env.NEXT_PUBLIC_LOGO_URL || OG_IMAGE_URL;
@@ -34,7 +34,16 @@ export const APP_URL = `${DEPLOYED_ORIGIN}${BASE_PATH}`;
  * Ensures basePath is respected for GitHub Pages
  */
 export const getPublicAssetPath = (assetPath: string): string => {
-  if (typeof assetPath !== "string" || !assetPath.startsWith("/")) {
+  if (typeof assetPath !== "string") {
+    return "";
+  }
+
+  // Allow fully qualified external URLs (e.g. Unsplash or CDN assets)
+  if (assetPath.startsWith("http://") || assetPath.startsWith("https://")) {
+    return assetPath;
+  }
+
+  if (!assetPath.startsWith("/")) {
     return "";
   }
 
@@ -46,9 +55,19 @@ export const getPublicAssetPath = (assetPath: string): string => {
  * Ensures images are accessible from any external source
  */
 export const getAbsoluteImageUrl = (imagePath: string): string => {
-  if (typeof imagePath !== "string" || !imagePath.startsWith("/")) {
+  if (typeof imagePath !== "string") {
     return "";
   }
+
+  // External URLs are returned as-is
+  if (imagePath.startsWith("http://") || imagePath.startsWith("https://")) {
+    return imagePath;
+  }
+
+  if (!imagePath.startsWith("/")) {
+    return "";
+  }
+
   return `${APP_URL}${imagePath}`;
 };
 
@@ -57,7 +76,16 @@ export const getAbsoluteImageUrl = (imagePath: string): string => {
  * WhatsApp previews do not reliably render SVGs, so fallback to OG_IMAGE_URL.
  */
 export const getOgImageUrl = (imagePath: string): string => {
-  if (typeof imagePath !== "string" || !imagePath.startsWith("/")) {
+  if (typeof imagePath !== "string") {
+    return OG_IMAGE_URL;
+  }
+
+  // Use external URLs directly when provided
+  if (imagePath.startsWith("http://") || imagePath.startsWith("https://")) {
+    return imagePath;
+  }
+
+  if (!imagePath.startsWith("/")) {
     return OG_IMAGE_URL;
   }
 
@@ -75,12 +103,4 @@ export const getProductDetailUrl = (productId: string): string => {
     return APP_URL;
   }
   return `${APP_URL}/product/${encodeURIComponent(productId.trim())}/`;
-};
-
-/**
- * Build product image URL with absolute path
- * Used in og:image and WhatsApp preview
- */
-export const getProductImageUrl = (imagePath: string): string => {
-  return getAbsoluteImageUrl(imagePath);
 };

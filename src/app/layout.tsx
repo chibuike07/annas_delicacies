@@ -7,36 +7,36 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(DEPLOYED_ORIGIN),
   title:
-    "Anna's Kitchen - Authentic Nigerian Igbo Delicacies | Order on WhatsApp",
+    "Ann's SoleCraft Studio - Designer Shoes in Nigeria | Order on WhatsApp",
   description:
-    "Savor the taste of authentic Nigerian Igbo delicacies from Anna's Kitchen. Fresh local meals, soups, swallows, and more with instant WhatsApp ordering. Fast delivery and excellent taste.",
+    "Shop handcrafted Nigerian designer shoes from Ann's SoleCraft Studio. Premium heels, loafers, sneakers and sandals with instant WhatsApp ordering and fast delivery within Nigeria.",
   keywords:
-    "Nigerian food, Igbo delicacies, Anna's Kitchen, local food, Nigerian meals, WhatsApp food order",
-  authors: [{ name: "Anna's Kitchen" }],
-  creator: "Anna's Kitchen",
-  publisher: "Anna's Kitchen",
+    "designer shoes Nigeria, Lagos shoes, Nigerian footwear, women's heels, men's loafers, Ann's SoleCraft Studio, WhatsApp shoe order",
+  authors: [{ name: "Ann's SoleCraft Studio" }],
+  creator: "Ann's SoleCraft Studio",
+  publisher: "Ann's SoleCraft Studio",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://chibuike07.github.io/annas_delicacies",
-    siteName: "Anna's Kitchen",
-    title: "Anna's Kitchen - Authentic Nigerian Igbo Delicacies",
+    url: "https://chibuike07.github.io/annas_solecraft_studio",
+    siteName: "Ann's SoleCraft Studio",
+    title: "Ann's SoleCraft Studio - Designer Shoes in Nigeria",
     description:
-      "Shop premium curated gear for bold lifestyles with instant WhatsApp checkout.",
+      "Discover Nigerian designer shoes handcrafted for Lagos streets, owambe nights and everyday comfort with instant WhatsApp checkout.",
     images: [
       {
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "Anna's Kitchen - Nigerian Igbo Delicacies",
+        alt: "Ann's SoleCraft Studio - Nigerian Designer Shoes",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anna's Kitchen - Authentic Nigerian Igbo Delicacies",
+    title: "Ann's SoleCraft Studio - Designer Shoes in Nigeria",
     description:
-      "Savor authentic Nigerian Igbo delicacies from Anna's Kitchen with instant WhatsApp ordering.",
+      "Shop handcrafted Nigerian designer shoes from Ann's SoleCraft Studio with instant WhatsApp ordering.",
     images: [OG_IMAGE_URL],
   },
   robots: {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://chibuike07.github.io/annas_delicacies",
+    canonical: "https://chibuike07.github.io/annas_solecraft_studio",
   },
 };
 

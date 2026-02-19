@@ -93,7 +93,7 @@ const ProductCard = ({
         >
           <Image
             src={resolveImageUrl(product.image)}
-            alt={`${sanitizeText(product.name)} - Delicious Nigerian food from Anna's Kitchen`}
+            alt={`${sanitizeText(product.name)} - Designer shoes from Ann's SoleCraft Studio`}
             title={sanitizeText(product.name)}
             fill
             sizes="(max-width: 48em) 100vw, (max-width: 80em) 50vw, 33vw"

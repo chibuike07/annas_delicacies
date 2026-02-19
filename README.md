@@ -1,6 +1,6 @@
-# Anna's Kitchen - Nigerian Delicacies
+# Ann's SoleCraft Studio - Designer Shoes in Nigeria
 
-Responsive landing page built with Next.js, TypeScript, and styled-components. It showcases premium curated products by category and enables instant checkout via WhatsApp integration.
+Responsive landing page built with Next.js, TypeScript, and styled-components. It showcases Nigerian designer shoes by category and enables instant checkout via WhatsApp integration.
 
 ## Quick Start
 
@@ -20,7 +20,7 @@ Responsive landing page built with Next.js, TypeScript, and styled-components. I
 
 This project is configured for static export. For GitHub Pages:
 
-1. Set `NEXT_PUBLIC_BASE_PATH` to your repository name (for example: `/annas_delicacies`).
+1. Set `NEXT_PUBLIC_BASE_PATH` to your repository name (for example: `/annas_solecraft_studio`).
 2. (Optional) Set `NEXT_PUBLIC_SITE_URL` to your full site origin (for example: `https://yourname.github.io`).
 3. (Optional) Set `NEXT_PUBLIC_OG_IMAGE_URL` to a public PNG/JPG for WhatsApp previews.
 4. (Optional) Set `NEXT_PUBLIC_LOGO_URL` to a public PNG/JPG for structured data.
@@ -30,7 +30,7 @@ This project is configured for static export. For GitHub Pages:
 ## Customize
 
 - Update the WhatsApp number in `WHATSAPP_NUMBER` constant inside `src/lib/utils/dummyData.ts` (currently: 2348121485310).
-- Replace placeholder product images inside `public/products` with real product images.
-- Replace animated spotlight GIFs inside `public/animations` with your own cartoon billboards.
-- Update product data inside `src/lib/utils/dummyData.ts` (products array and categories).
+- Replace placeholder product images inside `public/products` with real shoe and lifestyle images.
+- Replace animated spotlight GIFs inside `public/animations` with your own footwear-themed billboards.
+- Update product data inside `src/lib/utils/dummyData.ts` (products array and categories) to match your designer shoe catalog.
 - Adjust the green UI palette in `src/app/globals.css` if you want a different theme.

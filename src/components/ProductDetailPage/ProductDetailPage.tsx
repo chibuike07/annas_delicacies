@@ -43,7 +43,7 @@ const ProductDetailPage = ({ params }: IProductDetailPageProps) => {
               priceCurrency: "NGN",
               brand: {
                 "@type": "Brand",
-                name: "Anna's Delicacies",
+                name: "Ann's SoleCraft Studio",
               },
               offers: {
                 "@type": "Offer",

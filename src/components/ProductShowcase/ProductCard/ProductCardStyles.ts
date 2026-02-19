@@ -103,18 +103,22 @@ export const ProductCardWrapper = styled.article`
         font-size: 0.72rem;
         padding: 0.3rem 0.6rem;
         border-radius: 999px;
-        background: rgba(249, 115, 22, 0.12);
-        color: var(--brand-dark);
+        background: var(--badge, #8c1c13);
+        color: #fff;
         font-weight: 600;
+        letter-spacing: 0.01em;
+        box-shadow: 0 2px 8px rgba(140, 28, 19, 0.08);
       }
 
       .promo_chip {
         font-size: 0.72rem;
         padding: 0.3rem 0.6rem;
         border-radius: 999px;
-        background: rgba(34, 197, 94, 0.16);
-        color: var(--accent);
+        background: rgba(31, 170, 89, 0.16);
+        color: var(--brand);
         font-weight: 600;
+        letter-spacing: 0.01em;
+        box-shadow: 0 2px 8px rgba(31, 170, 89, 0.08);
       }
     }
 
